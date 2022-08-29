@@ -31,6 +31,10 @@ public class SimplePresentationScreen extends JFrame {
 	private JLabel lbLibretaUniversitaria, lbApellido, lbNombre, lbEmail, lbRepositorio, lbIcono, lbGeneracionDeVentana;
 	private JTextField tfLibretaUniversitaria, tfApellido, tfNombre, tfEmail, tfRepositorio;
 	
+	/**
+	 * Constructor de la pantalla de presentacion de un estudiante
+	 * @param studentData estudiante que se mostrara sus datos en pantalla
+	 */
 	public SimplePresentationScreen(Student studentData) {
 		this.studentData = studentData;
 		
@@ -56,6 +60,9 @@ public class SimplePresentationScreen extends JFrame {
 		this.datoDeGeneracion();
 	}
 	
+	/**
+	 * Tabula la pestaña de datos personales del estudiante
+	 */
 	private void init() {
 		// Tabbed Pane to student personal data
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -66,6 +73,9 @@ public class SimplePresentationScreen extends JFrame {
 		contentPane.add(tabbedPane, BorderLayout.WEST);
 	}
 	
+	/**
+	 * Arma los paneles
+	 */
 	private void armarPaneles() {
 		pnLabels = new JPanel();
 		pnLabels.setBounds(0, 0, 92, 190);
@@ -78,6 +88,9 @@ public class SimplePresentationScreen extends JFrame {
 		tabInformation.add(pnDatos);
 	}
 	
+	/**
+	 * Arma las etiquetas del programa
+	 */
 	private void armarLabel() {
 		lbLibretaUniversitaria = new JLabel("LU");
 		lbLibretaUniversitaria.setBounds( 8, 10 , 180, 20);
@@ -106,6 +119,9 @@ public class SimplePresentationScreen extends JFrame {
 		pnLabels.add(lbRepositorio);
 	}
 	
+	/**
+	 * Arma las barras de texto para los datos del estudiante
+	 */
 	private void armarInput() {
 		tfLibretaUniversitaria = new JTextField();
 		tfLibretaUniversitaria.setBounds(0, 10, 318, 20);
@@ -134,6 +150,9 @@ public class SimplePresentationScreen extends JFrame {
 		pnDatos.add(tfRepositorio);
 	}
 	
+	/**
+	 * Ingresa los datos del estudiante en su correspondiente barra de texto
+	 */
 	private void cargarDatos() {
 		tfLibretaUniversitaria.setText(studentData.getId()+"");
 		tfApellido.setText(studentData.getLastName());
@@ -143,6 +162,9 @@ public class SimplePresentationScreen extends JFrame {
 		this.bloquearTextFieldDeDatos();
 	}
 
+	/**
+	 * Establece que las barras de texto no sean editables
+	 */
 	private void bloquearTextFieldDeDatos() {
 		tfLibretaUniversitaria.setEditable(false);
 		tfApellido.setEditable(false);
@@ -151,6 +173,9 @@ public class SimplePresentationScreen extends JFrame {
 		tfRepositorio.setEditable(false);
 	}
 	
+	/**
+	 * Indica fecha y hora de la generacion de la aplicacion
+	 */
 	private void datoDeGeneracion() {
 		LocalDateTime localTime = LocalDateTime.now();
 		String texto = "Esta ventana fue generada el "+localTime.getDayOfMonth()+"/"+localTime.getMonthValue()+"/"+localTime.getYear()+" a las "+localTime.getHour()+":"+localTime.getMinute()+":"+localTime.getSecond();
@@ -161,6 +186,9 @@ public class SimplePresentationScreen extends JFrame {
 		
 	}
 	
+	/**
+	 * Agrega el icono en la pantalla
+	 */
 	private void agregarIcono() {
 		File directory = new File("C:\\Users\\Abril\\Desktop\\ISI\\Tecnologia de la Programacion\\Tdp-proyecto\\proyecto-1\\Proyecto-1\\src\\images");
 		
