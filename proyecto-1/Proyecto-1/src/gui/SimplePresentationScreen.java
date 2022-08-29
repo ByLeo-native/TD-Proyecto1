@@ -31,7 +31,6 @@ public class SimplePresentationScreen extends JFrame {
 	private JLabel lbLibretaUniversitaria, lbApellido, lbNombre, lbEmail, lbRepositorio, lbIcono, lbGeneracionDeVentana;
 	private JTextField tfLibretaUniversitaria, tfApellido, tfNombre, tfEmail, tfRepositorio;
 	
-
 	/**
 	 * Constructor de la pantalla de presentacion de un estudiante
 	 * @param studentData estudiante que se mostrara sus datos en pantalla
