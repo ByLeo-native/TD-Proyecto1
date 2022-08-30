@@ -190,16 +190,18 @@ public class SimplePresentationScreen extends JFrame {
 	 * Agrega el icono en la pantalla
 	 */
 	private void agregarIcono() {
+
 		File imagen = new File("C:\\Users\\Abril\\Desktop\\ISI\\Tecnologia de la Programacion\\Tdp-proyecto\\proyecto-1\\Proyecto-1\\src\\images\\avatar.jpg");
 		try {
 			BufferedImage bufferedImage = ImageIO.read(imagen);
 			ImageIcon icon = new ImageIcon(bufferedImage.getScaledInstance(154, 154, Image.SCALE_DEFAULT));
 			lbIcono = new JLabel();
 			lbIcono.setIcon(icon);
+
 			contentPane.add(lbIcono, BorderLayout.EAST);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 }
