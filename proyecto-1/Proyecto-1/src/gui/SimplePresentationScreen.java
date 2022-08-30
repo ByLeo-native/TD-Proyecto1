@@ -196,6 +196,7 @@ public class SimplePresentationScreen extends JFrame {
 			ImageIcon icon = new ImageIcon(bufferedImage.getScaledInstance(154, 154, Image.SCALE_DEFAULT));
 			lbIcono = new JLabel();
 			lbIcono.setIcon(icon);
+
 			contentPane.add(lbIcono, BorderLayout.EAST);
 		} catch (IOException e) {
 			e.printStackTrace();
